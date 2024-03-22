@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "bboards"
+version = "0.1.0"
+description = "create site bboards"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django-bootstrap4 = "^24.1"
+django = "^5.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,11 @@
+{% extends "layout/basic.html" %}
+{% block title %}
+Помилка входу до сайту
+{% endblock title %}
+{% block content %}
+<h2>Активація</h2>
+<p>Активація користувача пройшла невдало.</p>
+<p><a href="{% url 'main:register' %}">
+        Зареєструватися ще раз
+    </a></p>
+{% endblock content %}
