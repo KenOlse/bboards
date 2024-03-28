@@ -66,6 +66,9 @@ def user_activate(request, sign):
         user.save()
     return render(request, template)
 
+def by_rubric(request, pk):
+    pass
+
 
 class ChangeUserInfoView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     model = AdvUser

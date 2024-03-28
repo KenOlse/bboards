@@ -55,7 +55,17 @@
     </div>
     <div class="row">
         <nav class="col-md-auto nav flex-column border">
-            <a class="nav-link root" href="{% url 'main:profile' %}">Головна</a>
+            <a class="nav-link root" href="{% url 'main:index' %}">Головна</a>
+            {% for rubric in rubrics %}
+            {% ifchanged rubric.super_rubric.pk %}
+            <span class="nav-link root font-weight-bold">
+                {{ rubric.super_rubric.name }}
+            </span>
+            {% endifchanged %}
+            <a href="{% url 'main:by_rubric' pk=rubric.pk %}" class="nav-link">
+                {{ rubric.name }}
+            </a>
+            {% endfor %}
             <a href="{% url 'main:other' page='about' %}" class="nav-link root">Про сайт</a>
             <span class="nav-link root font-weight-bold">Нерухомість</span>
             <a href="#" class="nav-link">Житло</a>

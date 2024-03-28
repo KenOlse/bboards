@@ -1,7 +1,7 @@
 from django.urls import path
 
 
-from .views import index, other_page, profile, user_activate
+from .views import index, other_page, profile, user_activate, by_rubric
 from .views import BBLoginView, bblogoutview, BBPasswordChangeView
 from .views import ChangeUserInfoView, DeleteUserView
 from .views import RegisterDoneView, RegisterUserView
@@ -24,6 +24,12 @@ urlpatterns = [
     path('accounts/profile/', profile, name='profile'),
     path('accounts/login/', BBLoginView.as_view(), name='login'),
     path('accounts/logout/', bblogoutview, name='logout'),
+    path('<int:pk>/', by_rubric, name='by_rubric'),
     path('<str:page>/', other_page, name='other'),
     path('', index, name='index'),
 ]
+
+if settings.DEBUG:
+     urlpatterns.append(path('static/<path:path>', never_cache(serve)))
+     urlpatterns += static(settings.MEDIA_URL,
+          document_root=settings.MEDIA_ROOT)

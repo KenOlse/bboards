@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.11"
 django-bootstrap4 = "^24.1"
 django = "^5.0.3"
+django-cleanup = "^8.1.0"
+easy-thumbnails = "^2.8.5"
 
 
 [build-system]
