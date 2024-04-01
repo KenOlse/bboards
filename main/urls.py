@@ -1,4 +1,8 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.staticfiles.views import serve
+from django.views.decorators.cache import never_cache
 
 
 from .views import index, other_page, profile, user_activate, by_rubric
