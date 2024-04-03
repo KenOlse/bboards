@@ -8,11 +8,19 @@
 
 header h1 {
     margin: 0;
-    background: url(../images/bg.jpg) left / auto 100% no-repeat,
-        url(../images/bg.jpg) right / auto 100% no-repeat;
+    background: url(../images/inter1.png) left / auto 100% no-repeat,
+        url(../images/inter1.png) right / auto 100% no-repeat;
     border-radius: 15px;
 }
 
 .root {
     font-size: larger;
+}
+
+img.main-image {
+    width: 300px;
+}
+
+img.additional-image {
+    width: 180px;
 }
